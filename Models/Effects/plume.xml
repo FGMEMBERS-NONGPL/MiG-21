@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<!-- afterburner plume, by Dave Culp -->
+
+<PropertyList>
+
+ <path>burner.ac</path>
+
+
+ <animation>
+  <type>select</type>
+  <object-name>plume</object-name>
+  <condition>
+   <property>/engines/engine[0]/augmentation</property>
+  </condition>
+ </animation>
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>32000</max-m>
+ </animation>
+
+</PropertyList>

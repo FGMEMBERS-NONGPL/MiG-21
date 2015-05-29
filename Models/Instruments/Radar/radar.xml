@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+
+<!-- Radar, with 4 AI blips (green), 20 mile range   -->
+<!--             4 MP blips (yellow), 20 mile range  -->
+<!-- by Dave Culp                                       -->
+
+<PropertyList>
+
+ <path>radar.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>screen</object-name>
+   <emission>
+     <red>0.0</red>
+     <green>0.1</green>
+     <blue>0.0</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation> 
+
+<!-- *************************************************-->
+<!-- * TARGET 1  (AI) ********************************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip1</object-name>
+  <condition>
+    <property>ai/models/aircraft[0]/radar/in-range</property>
+  </condition>
+ </animation>
+
+ <!-- range 20 **************-->
+ <animation>
+  <type>translate</type>   
+  <object-name>blip1</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/aircraft[0]/radar/x-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip1</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/aircraft[0]/radar/y-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- *************************************************-->
+<!-- * TARGET 2  (AI) ********************************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip2</object-name>
+  <condition>
+    <property>ai/models/aircraft[1]/radar/in-range</property>
+  </condition>
+ </animation>
+
+ <!-- range 20 **************-->
+ <animation>
+  <type>translate</type>   
+  <object-name>blip2</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/aircraft[1]/radar/x-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip2</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/aircraft[1]/radar/y-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+
+<!-- *************************************************-->
+<!-- * TARGET 3  (AI) ********************************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip3</object-name>
+  <condition>
+    <property>ai/models/aircraft[2]/radar/in-range</property>
+  </condition>
+ </animation>
+
+ <!-- range 20 **************-->
+ <animation>
+  <type>translate</type>   
+  <object-name>blip3</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/aircraft[2]/radar/x-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip3</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/aircraft[2]/radar/y-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+
+<!-- *************************************************-->
+<!-- * TARGET 4  (AI) ********************************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip4</object-name>
+  <condition>
+    <property>ai/models/aircraft[3]/radar/in-range</property>
+  </condition>
+ </animation>
+
+ <!-- range 20 **************-->
+ <animation>
+  <type>translate</type>   
+  <object-name>blip4</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/aircraft[3]/radar/x-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip4</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/aircraft[3]/radar/y-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+
+<!-- *************************************************-->
+<!-- * TARGET 1  (MP) ********************************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip5</object-name>
+  <condition>
+    <property>ai/models/multiplayer[0]/radar/in-range</property>
+  </condition>
+ </animation>
+
+ <!-- range 20 **************-->
+ <animation>
+  <type>translate</type>   
+  <object-name>blip5</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/multiplayer[0]/radar/x-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip5</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/multiplayer[0]/radar/y-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+
+<!-- *************************************************-->
+<!-- * TARGET 2  (MP) ********************************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip6</object-name>
+  <condition>
+    <property>ai/models/multiplayer[1]/radar/in-range</property>
+  </condition>
+ </animation>
+
+ <!-- range 20 **************-->
+ <animation>
+  <type>translate</type>   
+  <object-name>blip6</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/multiplayer[1]/radar/x-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip6</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/multiplayer[1]/radar/y-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+
+
+<!-- *************************************************-->
+<!-- * TARGET 3  (MP) ********************************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip7</object-name>
+  <condition>
+    <property>ai/models/multiplayer[2]/radar/in-range</property>
+  </condition>
+ </animation>
+
+ <!-- range 20 **************-->
+ <animation>
+  <type>translate</type>   
+  <object-name>blip7</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/multiplayer[2]/radar/x-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip7</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/multiplayer[2]/radar/y-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+
+
+<!-- *************************************************-->
+<!-- * TARGET 4  (MP) ********************************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip8</object-name>
+  <condition>
+    <property>ai/models/multiplayer[3]/radar/in-range</property>
+  </condition>
+ </animation>
+
+ <!-- range 20 **************-->
+ <animation>
+  <type>translate</type>   
+  <object-name>blip8</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/multiplayer[3]/radar/x-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip8</object-name>
+  <condition>
+    <equals>
+      <property>instrumentation/radar/range</property>
+      <value>20</value>
+    </equals>
+  </condition>
+  <property>ai/models/multiplayer[3]/radar/y-shift</property>
+  <factor>0.0013</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+
+
+
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>
